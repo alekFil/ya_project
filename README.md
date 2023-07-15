@@ -290,6 +290,24 @@ $ git diff main~3 main
 
 #### Создание ветки в удаленном репозитории из локального
 
+##### Вариант, предложенный Я.П
+
+Для создания ветки в удаленном репозитории из локального используется команда **git push -u origin %%НАЗВАНИЕ_ВЕТКИ%%**
+
+```bash
+$ git push -u origin feature/merge-request
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature/merge-request' on GitHub by visiting:
+remote:      https://github.com/%ВАШ_АККАУНТ%/git-branches/pull/new/feature/merge-request
+remote: 
+To github.com:%ВАШ_АККАУНТ%/git-branches.git
+ * [new branch]      feature/merge-request -> feature/merge-request
+branch 'feature/merge-request' set up to track 'origin/feature/merge-request'. 
+```
+
+##### Вариант, предложенный Git
+
 Для создания ветки в удаленном репозитории из локального используется команда **git push --set-upstream origin %%НАЗВАНИЕ_ВЕТКИ%%**
 
 ```bash
@@ -328,8 +346,6 @@ $ git checkout main # если не в основной, переходим в �
 $ git branch -D feature/diff # удаляем поглощаемую ветку
 Deleted branch feature/diff (was f30d441). 
 ```
-
-**Удаление локальной ветки через Git не удаляет ветку на GitHub!**
 
 ---
 
