@@ -300,6 +300,37 @@ Enumerating objects: 11, done.
 branch 'feature/add-brach-info' set up to track 'origin/feature/add-brach-info'.
 ```
 
+#### Объединение веток
+
+Для слияния двух веток используется **git merge %%НАЗВАНИЕ_ВЕТКИ%%**
+
+```bash
+$ git checkout main # переключились на главную ветку
+
+$ git merge feature/diff # объединили ветки
+Updating 079cfbf..f30d441
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+) 
+```
+
+Для удаления ветки после объединения использууется **git branch -D %%НАЗВАНИЕ_ВЕТКИ%%** или **git branch -d %%НАЗВАНИЕ_ВЕТКИ%%**. Второй вариант удалит ветку только если она была полностью объединена с другой.
+
+```bash
+$ git branch # проверяем местоположение
+  bugfix/fix-branch
+  feature/add-branch-info
+  feature/diff
+* main
+
+$ git checkout main # если не в основной, переходим в неё
+
+$ git branch -D feature/diff # удаляем поглощаемую ветку
+Deleted branch feature/diff (was f30d441). 
+```
+
+**Удаление локальной ветки через Git не удаляет ветку на GitHub!**
+
 ---
 
 #### Дополнительные сведения и полезные функции
