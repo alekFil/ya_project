@@ -288,6 +288,18 @@ $ git diff main 2ea56ab
 $ git diff main~3 main
 ```
 
+#### Создание ветки в удаленном репозитории из локального
+
+Для создания ветки в удаленном репозитории из локального используется команда **git push --set-upstream origin %%НАЗВАНИЕ_ВЕТКИ%%**
+
+```bash
+$ git push --set-upstream origin feature/add-brach-info
+Enumerating objects: 11, done.
+#...
+ * [new branch]      feature/add-brach-info -> feature/add-brach-info
+branch 'feature/add-brach-info' set up to track 'origin/feature/add-brach-info'.
+```
+
 ---
 
 #### Дополнительные сведения и полезные функции
