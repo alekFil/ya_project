@@ -220,6 +220,46 @@ origin    git@github.com:yandex-praktikum/git-clone-lesson.git (fetch)
 origin    git@github.com:yandex-praktikum/git-clone-lesson.git (push) 
 ```
 
+### Работа с ветками (branches)
+
+#### Просмотр веток
+
+С помощью команды **git branch** можно посмотреть, какие в проекте есть ветки и в какой из них вы сейчас находитесь
+
+```bash
+$ git branch 
+* main # мы в основной ветке
+
+# чтобы выйти из просмотра веток, может понадобиться Q! 
+```
+
+#### Создание веток
+
+Создать ветку — **git branch <название_ветки>**
+
+```bash
+$ git branch feature/add-branch-info # создали ветку feature/add-branch-info
+$ git branch # посмотрели ветки
+  
+  feature/add-branch-info  # появилась новая
+* main                     # * значит, что мы находимся в основной ветке 
+```
+
+#### Переключение между ветками
+
+Начать работу в другой ветке необходимо с использованием команды **git checkout %%НАЗВАНИЕ_ВЕТКИ%%**.
+
+```bash
+$ git checkout feature/add-branch-info # перешли в новую ветку
+Switched to branch 'feature/add-branch-info'
+
+$ git branch # проверили
+
+* feature/add-branch-info # теперь находимся тут
+  main 
+```
+
+
 ---
 
 #### Дополнительные сведения и полезные функции
