@@ -1,7 +1,0 @@
-# игнорировать все файлы
-**
-# кроме .tex и .pdf
-!**.tex
-!**.pdf
-!.gitignore
-!README.md
